@@ -3,18 +3,18 @@ const {salida, contarVecinosTotal, contarVecinosColumnasLaterales,
 
 const Matriz = require('../models/matriz');
 
-
+let final = [
+    ['.', '.', '.', '.', '.', '.', '.', '.'],
+    ['.', '.', '.', '*', '*', '.', '.', '.'],
+    ['.', '.', '.', '*', '*', '.', '.', '.'],
+    ['.', '.', '.', '.', '.', '.', '.', '.']
+  ];
 
 describe("Test", () => {
     
     test("Testear salida", () => {
         let inicial = salida()
-        let final = [
-            ['.', '.', '.', '.', '.', '.', '.', '.'],
-            ['.', '.', '.', '*', '*', '.', '.', '.'],
-            ['.', '.', '.', '*', '*', '.', '.', '.'],
-            ['.', '.', '.', '.', '.', '.', '.', '.']
-          ];
+        
       expect(inicial).toEqual(final)
     });
 
@@ -42,12 +42,6 @@ describe("Test", () => {
     //TEST PARA CHECAR LOS VECINOS DE LA CELULA REVIVIDA
     test('Test Checar celula Revivida', ()=>{
         let inicial = salida()
-        let final = [
-            ['.', '.', '.', '.', '.', '.', '.', '.'],
-            ['.', '.', '.', '*', '*', '.', '.', '.'],
-            ['.', '.', '.', '*', '*', '.', '.', '.'],
-            ['.', '.', '.', '.', '.', '.', '.', '.']
-          ];
         expect(inicial[1][3]).toEqual(final[1][3]);
     })
   });
