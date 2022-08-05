@@ -13,7 +13,6 @@ const main = async()=>{
   matriz.llenarMatriz();
 
   const cellsVivas = await readInput('Cuántas células vivas deseas tener: ');
-  console.log(cellsVivas);
   let ok;
   for(let i= 0; i<cellsVivas; i++){
     do {
