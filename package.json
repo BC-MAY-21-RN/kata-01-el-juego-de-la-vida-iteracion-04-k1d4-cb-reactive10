@@ -1,0 +1,29 @@
+{
+  "name": "k1d4-cb-reactive10",
+  "version": "1.0.0",
+  "description": "![BrightCoders Logo](img/logo-bc.png)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BC-MAY-21-RN/K1D4-CB-REACTIVE10.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BC-MAY-21-RN/K1D4-CB-REACTIVE10/issues"
+  },
+  "homepage": "https://github.com/BC-MAY-21-RN/K1D4-CB-REACTIVE10#readme",
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^9.1.0",
+    "jest": "^28.1.3"
+  }
+}
