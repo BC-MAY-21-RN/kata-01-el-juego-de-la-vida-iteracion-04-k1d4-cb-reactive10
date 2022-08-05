@@ -51,18 +51,30 @@ export default class Matriz {
     return this.matriz;
   }
 
-  //Function viveOmuere has a Cognitive Complexity of 8 (exceeds 5 allowed). Consider refactoring.
-  viveOmuere(num,x,y){
+  //Function viveOmuere has a Cognitive Complexity of 7 (exceeds 5 allowed). Consider refactoring. 
+  /* viveOmuere(num,x,y){
     if (this.matriz[x][y] == ".") {
       if (num == 3) this.matriz[x][y] = "*";
-    } else {
-      (num == 3 || num == 2)?this.matriz[x][y] = "*" : this.matriz[x][y] = ".";
+    } else //es {
+      (num == 3  || num == 2) ? this.matriz[x][y] = "*" : this.matriz[x][y] = ".";
       /*if (num == 3 || num == 2) {
           this.matriz[x][y] = "*";
       } else {
         this.matriz[x][y] = ".";
-      }*/
+      }
     }
+  } */
+
+  viveOmuere(num,x,y){
+    (this.matriz[x][y] == ".") ? this.revive(num,x,y) : this.kill(num,x,y);
+  }
+
+  revive(num,x,y){
+    if (num == 3) this.matriz[x][y] = "*";
+  }
+
+  kill(num,x,y) {
+    (num == 3  || num == 2) ? this.matriz[x][y] = "*" : this.matriz[x][y] = ".";
   }
 
   countNeighbours(x, y) {
