@@ -22,10 +22,12 @@ const main = async()=>{
     } while (ok == false);
   }
 
+  console.log("1ra Generacion".blue)
   matriz.imprimirMatriz();
 
 
   console.log("________________");
+  console.log("2da Generacion".blue)
   matriz.imprimirMatriz(matriz.siguienteGeneracion());
 }
 
