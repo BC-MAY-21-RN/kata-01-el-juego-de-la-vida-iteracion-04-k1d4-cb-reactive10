@@ -64,12 +64,12 @@ export default class Matrix {
   }
 
   countNeighbours(x, y) {
-    let neighbours = 0;
-    neighbours += this.countSide(x - 1, y - 1);
-    neighbours += this.countMiddle(x, y);
-    neighbours += this.countSide(x - 1, y + 1);
+    let neighbour = 0;
+    neighbour += this.countSide(x - 1, y - 1);
+    neighbour += this.countMiddle(x, y);
+    neighbour += this.countSide(x - 1, y + 1);
 
-    return neighbours;
+    return neighbour;
   }
 
   countSide(x, y) {

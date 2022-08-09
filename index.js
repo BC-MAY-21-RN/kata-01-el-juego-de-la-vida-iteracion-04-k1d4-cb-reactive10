@@ -1,6 +1,6 @@
 
 import { readInput, Home} from "./helpers/inquirer.js";
-import  Matriz  from "./models/matriz.js";
+import  Matrix  from "./models/matrix.js";
 
 const main = async()=>{
   Home()
@@ -8,9 +8,9 @@ const main = async()=>{
   
   const columns = await readInput('Ingresa las columnas: ');
 
-  let matriz = new Matriz(rows, columns);
-  matriz.crearMatriz();
-  matriz.llenarMatriz();
+  let matriz = new Matrix(rows, columns);
+  matriz.createMatrix();
+  matriz.fillMatrix();
 
   const cellsVivas = await readInput('Cuántas células vivas deseas tener: ');
   let ok;
@@ -23,12 +23,13 @@ const main = async()=>{
   }
 
   console.log("1ra Generacion".blue)
-  matriz.imprimirMatriz();
+  matriz.printMatrix();
 
 
   console.log("________________");
+  
   console.log("2da Generacion".blue)
-  matriz.imprimirMatriz(matriz.siguienteGeneracion());
+  matriz.printMatrix(matriz.nextGeneration());
 }
 
 main();
